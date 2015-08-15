@@ -1,0 +1,1126 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.3.9
+-- Dumped by pg_dump version 9.3.9
+-- Started on 2015-08-10 11:37:13 COT
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 349 (class 1259 OID 58439)
+-- Name: kyron_bloque; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_bloque (
+    id_bloque integer NOT NULL,
+    nombre character(50) NOT NULL,
+    descripcion character(255) DEFAULT NULL::bpchar,
+    grupo character(200) NOT NULL
+);
+
+
+ALTER TABLE public.kyron_bloque OWNER TO kyron_frame;
+
+--
+-- TOC entry 348 (class 1259 OID 58437)
+-- Name: kyron_bloque_id_bloque_seq; Type: SEQUENCE; Schema: public; Owner: kyron_frame
+--
+
+CREATE SEQUENCE kyron_bloque_id_bloque_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.kyron_bloque_id_bloque_seq OWNER TO kyron_frame;
+
+--
+-- TOC entry 2604 (class 0 OID 0)
+-- Dependencies: 348
+-- Name: kyron_bloque_id_bloque_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kyron_frame
+--
+
+ALTER SEQUENCE kyron_bloque_id_bloque_seq OWNED BY kyron_bloque.id_bloque;
+
+
+--
+-- TOC entry 351 (class 1259 OID 58451)
+-- Name: kyron_bloque_pagina; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_bloque_pagina (
+    idrelacion integer NOT NULL,
+    id_pagina integer DEFAULT 0 NOT NULL,
+    id_bloque integer DEFAULT 0 NOT NULL,
+    seccion character(1) NOT NULL,
+    posicion integer DEFAULT 0 NOT NULL
+);
+
+
+ALTER TABLE public.kyron_bloque_pagina OWNER TO kyron_frame;
+
+--
+-- TOC entry 350 (class 1259 OID 58449)
+-- Name: kyron_bloque_pagina_idrelacion_seq; Type: SEQUENCE; Schema: public; Owner: kyron_frame
+--
+
+CREATE SEQUENCE kyron_bloque_pagina_idrelacion_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.kyron_bloque_pagina_idrelacion_seq OWNER TO kyron_frame;
+
+--
+-- TOC entry 2605 (class 0 OID 0)
+-- Dependencies: 350
+-- Name: kyron_bloque_pagina_idrelacion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kyron_frame
+--
+
+ALTER SEQUENCE kyron_bloque_pagina_idrelacion_seq OWNED BY kyron_bloque_pagina.idrelacion;
+
+
+--
+-- TOC entry 353 (class 1259 OID 58462)
+-- Name: kyron_configuracion; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_configuracion (
+    id_parametro integer NOT NULL,
+    parametro character(255) NOT NULL,
+    valor character(255) NOT NULL
+);
+
+
+ALTER TABLE public.kyron_configuracion OWNER TO kyron_frame;
+
+--
+-- TOC entry 352 (class 1259 OID 58460)
+-- Name: kyron_configuracion_id_parametro_seq; Type: SEQUENCE; Schema: public; Owner: kyron_frame
+--
+
+CREATE SEQUENCE kyron_configuracion_id_parametro_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.kyron_configuracion_id_parametro_seq OWNER TO kyron_frame;
+
+--
+-- TOC entry 2606 (class 0 OID 0)
+-- Dependencies: 352
+-- Name: kyron_configuracion_id_parametro_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kyron_frame
+--
+
+ALTER SEQUENCE kyron_configuracion_id_parametro_seq OWNED BY kyron_configuracion.id_parametro;
+
+
+--
+-- TOC entry 355 (class 1259 OID 58473)
+-- Name: kyron_dbms; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_dbms (
+    idconexion integer NOT NULL,
+    nombre character varying(50) NOT NULL,
+    dbms character varying(20) NOT NULL,
+    servidor character varying(50) NOT NULL,
+    puerto integer NOT NULL,
+    conexionssh character varying(50) NOT NULL,
+    db character varying(100) NOT NULL,
+    esquema character varying(100) NOT NULL,
+    usuario character varying(100) NOT NULL,
+    password character varying(200) NOT NULL
+);
+
+
+ALTER TABLE public.kyron_dbms OWNER TO kyron_frame;
+
+--
+-- TOC entry 354 (class 1259 OID 58471)
+-- Name: kyron_dbms_idconexion_seq; Type: SEQUENCE; Schema: public; Owner: kyron_frame
+--
+
+CREATE SEQUENCE kyron_dbms_idconexion_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.kyron_dbms_idconexion_seq OWNER TO kyron_frame;
+
+--
+-- TOC entry 2607 (class 0 OID 0)
+-- Dependencies: 354
+-- Name: kyron_dbms_idconexion_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kyron_frame
+--
+
+ALTER SEQUENCE kyron_dbms_idconexion_seq OWNED BY kyron_dbms.idconexion;
+
+
+--
+-- TOC entry 356 (class 1259 OID 58482)
+-- Name: kyron_estilo; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_estilo (
+    usuario character(50) DEFAULT '0'::bpchar NOT NULL,
+    estilo character(50) NOT NULL
+);
+
+
+ALTER TABLE public.kyron_estilo OWNER TO kyron_frame;
+
+--
+-- TOC entry 358 (class 1259 OID 58490)
+-- Name: kyron_logger; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_logger (
+    id integer NOT NULL,
+    evento character(255) NOT NULL,
+    fecha character(50) NOT NULL
+);
+
+
+ALTER TABLE public.kyron_logger OWNER TO kyron_frame;
+
+--
+-- TOC entry 357 (class 1259 OID 58488)
+-- Name: kyron_logger_id_seq; Type: SEQUENCE; Schema: public; Owner: kyron_frame
+--
+
+CREATE SEQUENCE kyron_logger_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.kyron_logger_id_seq OWNER TO kyron_frame;
+
+--
+-- TOC entry 2608 (class 0 OID 0)
+-- Dependencies: 357
+-- Name: kyron_logger_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kyron_frame
+--
+
+ALTER SEQUENCE kyron_logger_id_seq OWNED BY kyron_logger.id;
+
+
+--
+-- TOC entry 360 (class 1259 OID 58496)
+-- Name: kyron_pagina; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_pagina (
+    id_pagina integer NOT NULL,
+    nombre character(50) DEFAULT ''::bpchar NOT NULL,
+    descripcion character(250) DEFAULT ''::bpchar NOT NULL,
+    modulo character(50) DEFAULT ''::bpchar NOT NULL,
+    nivel integer DEFAULT 0 NOT NULL,
+    parametro character(255) NOT NULL
+);
+
+
+ALTER TABLE public.kyron_pagina OWNER TO kyron_frame;
+
+--
+-- TOC entry 359 (class 1259 OID 58494)
+-- Name: kyron_pagina_id_pagina_seq; Type: SEQUENCE; Schema: public; Owner: kyron_frame
+--
+
+CREATE SEQUENCE kyron_pagina_id_pagina_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.kyron_pagina_id_pagina_seq OWNER TO kyron_frame;
+
+--
+-- TOC entry 2609 (class 0 OID 0)
+-- Dependencies: 359
+-- Name: kyron_pagina_id_pagina_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kyron_frame
+--
+
+ALTER SEQUENCE kyron_pagina_id_pagina_seq OWNED BY kyron_pagina.id_pagina;
+
+
+--
+-- TOC entry 365 (class 1259 OID 58537)
+-- Name: kyron_subsistema; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_subsistema (
+    id_subsistema integer NOT NULL,
+    nombre character varying(250) NOT NULL,
+    etiqueta character varying(100) NOT NULL,
+    id_pagina integer DEFAULT 0 NOT NULL,
+    observacion text
+);
+
+
+ALTER TABLE public.kyron_subsistema OWNER TO kyron_frame;
+
+--
+-- TOC entry 364 (class 1259 OID 58535)
+-- Name: kyron_subsistema_id_subsistema_seq; Type: SEQUENCE; Schema: public; Owner: kyron_frame
+--
+
+CREATE SEQUENCE kyron_subsistema_id_subsistema_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.kyron_subsistema_id_subsistema_seq OWNER TO kyron_frame;
+
+--
+-- TOC entry 2610 (class 0 OID 0)
+-- Dependencies: 364
+-- Name: kyron_subsistema_id_subsistema_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kyron_frame
+--
+
+ALTER SEQUENCE kyron_subsistema_id_subsistema_seq OWNED BY kyron_subsistema.id_subsistema;
+
+
+--
+-- TOC entry 366 (class 1259 OID 58547)
+-- Name: kyron_tempformulario; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_tempformulario (
+    id_sesion character(32) NOT NULL,
+    formulario character(100) NOT NULL,
+    campo character(100) NOT NULL,
+    valor text NOT NULL,
+    fecha character(50) NOT NULL
+);
+
+
+ALTER TABLE public.kyron_tempformulario OWNER TO kyron_frame;
+
+--
+-- TOC entry 362 (class 1259 OID 58511)
+-- Name: kyron_usuario; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_usuario (
+    id_usuario integer NOT NULL,
+    nombre character varying(50) DEFAULT ''::character varying NOT NULL,
+    apellido character varying(50) DEFAULT ''::character varying NOT NULL,
+    correo character varying(100) DEFAULT ''::character varying NOT NULL,
+    telefono character varying(50) DEFAULT ''::character varying NOT NULL,
+    imagen character(255) NOT NULL,
+    clave character varying(100) DEFAULT ''::character varying NOT NULL,
+    tipo character varying(255) DEFAULT ''::character varying NOT NULL,
+    estilo character varying(50) DEFAULT 'basico'::character varying NOT NULL,
+    idioma character varying(50) DEFAULT 'es_es'::character varying NOT NULL,
+    estado integer DEFAULT 0 NOT NULL
+);
+
+
+ALTER TABLE public.kyron_usuario OWNER TO kyron_frame;
+
+--
+-- TOC entry 361 (class 1259 OID 58509)
+-- Name: kyron_usuario_id_usuario_seq; Type: SEQUENCE; Schema: public; Owner: kyron_frame
+--
+
+CREATE SEQUENCE kyron_usuario_id_usuario_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.kyron_usuario_id_usuario_seq OWNER TO kyron_frame;
+
+--
+-- TOC entry 2611 (class 0 OID 0)
+-- Dependencies: 361
+-- Name: kyron_usuario_id_usuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: kyron_frame
+--
+
+ALTER SEQUENCE kyron_usuario_id_usuario_seq OWNED BY kyron_usuario.id_usuario;
+
+
+--
+-- TOC entry 363 (class 1259 OID 58529)
+-- Name: kyron_usuario_subsistema; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_usuario_subsistema (
+    id_usuario integer DEFAULT 0 NOT NULL,
+    id_subsistema integer DEFAULT 0 NOT NULL,
+    estado integer DEFAULT 0 NOT NULL
+);
+
+
+ALTER TABLE public.kyron_usuario_subsistema OWNER TO kyron_frame;
+
+--
+-- TOC entry 367 (class 1259 OID 58553)
+-- Name: kyron_valor_sesion; Type: TABLE; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+CREATE TABLE kyron_valor_sesion (
+    sesionid character(32) NOT NULL,
+    variable character(20) NOT NULL,
+    valor character(255) NOT NULL,
+    expiracion bigint DEFAULT 0 NOT NULL
+);
+
+
+ALTER TABLE public.kyron_valor_sesion OWNER TO kyron_frame;
+
+--
+-- TOC entry 2422 (class 2604 OID 58442)
+-- Name: id_bloque; Type: DEFAULT; Schema: public; Owner: kyron_frame
+--
+
+ALTER TABLE ONLY kyron_bloque ALTER COLUMN id_bloque SET DEFAULT nextval('kyron_bloque_id_bloque_seq'::regclass);
+
+
+--
+-- TOC entry 2424 (class 2604 OID 58454)
+-- Name: idrelacion; Type: DEFAULT; Schema: public; Owner: kyron_frame
+--
+
+ALTER TABLE ONLY kyron_bloque_pagina ALTER COLUMN idrelacion SET DEFAULT nextval('kyron_bloque_pagina_idrelacion_seq'::regclass);
+
+
+--
+-- TOC entry 2428 (class 2604 OID 58465)
+-- Name: id_parametro; Type: DEFAULT; Schema: public; Owner: kyron_frame
+--
+
+ALTER TABLE ONLY kyron_configuracion ALTER COLUMN id_parametro SET DEFAULT nextval('kyron_configuracion_id_parametro_seq'::regclass);
+
+
+--
+-- TOC entry 2429 (class 2604 OID 58476)
+-- Name: idconexion; Type: DEFAULT; Schema: public; Owner: kyron_frame
+--
+
+ALTER TABLE ONLY kyron_dbms ALTER COLUMN idconexion SET DEFAULT nextval('kyron_dbms_idconexion_seq'::regclass);
+
+
+--
+-- TOC entry 2431 (class 2604 OID 58493)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: kyron_frame
+--
+
+ALTER TABLE ONLY kyron_logger ALTER COLUMN id SET DEFAULT nextval('kyron_logger_id_seq'::regclass);
+
+
+--
+-- TOC entry 2432 (class 2604 OID 58499)
+-- Name: id_pagina; Type: DEFAULT; Schema: public; Owner: kyron_frame
+--
+
+ALTER TABLE ONLY kyron_pagina ALTER COLUMN id_pagina SET DEFAULT nextval('kyron_pagina_id_pagina_seq'::regclass);
+
+
+--
+-- TOC entry 2450 (class 2604 OID 58540)
+-- Name: id_subsistema; Type: DEFAULT; Schema: public; Owner: kyron_frame
+--
+
+ALTER TABLE ONLY kyron_subsistema ALTER COLUMN id_subsistema SET DEFAULT nextval('kyron_subsistema_id_subsistema_seq'::regclass);
+
+
+--
+-- TOC entry 2437 (class 2604 OID 58514)
+-- Name: id_usuario; Type: DEFAULT; Schema: public; Owner: kyron_frame
+--
+
+ALTER TABLE ONLY kyron_usuario ALTER COLUMN id_usuario SET DEFAULT nextval('kyron_usuario_id_usuario_seq'::regclass);
+
+
+--
+-- TOC entry 2579 (class 0 OID 58439)
+-- Dependencies: 349
+-- Data for Name: kyron_bloque; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+INSERT INTO kyron_bloque VALUES (-1, 'menuLateral                                       ', 'Menú lateral módulo de desarrollo.                                                                                                                                                                                                                             ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-2, 'pie                                               ', 'Pie de página módulo de desarrollo.                                                                                                                                                                                                                            ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-3, 'banner                                            ', 'Banner módulo de desarrollo.                                                                                                                                                                                                                                   ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-4, 'cruder                                            ', 'Módulo para crear módulos CRUD.                                                                                                                                                                                                                                ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-5, 'desenlace                                         ', 'Módulo de gestión de desenlace.                                                                                                                                                                                                                                ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-6, 'registro                                          ', 'Módulo para registrar páginas o módulos.                                                                                                                                                                                                                       ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-7, 'constructor                                       ', 'Módulo para diseñar páginas.                                                                                                                                                                                                                                   ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-8, 'contenidoCentral                                  ', 'Contenido página principal de desarrollo.                                                                                                                                                                                                                      ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-9, 'codificador                                       ', 'Módulo para decodificar cadenas.                                                                                                                                                                                                                               ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-10, 'plugin                                            ', 'Módulo para agregar plugin preconfigurados.                                                                                                                                                                                                                    ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (-11, 'saraFormCreator                                   ', 'Módulo para crear formulario con la recomendación de bloques de SARA.                                                                                                                                                                                          ', 'development                                                                                                                                                                                             ');
+INSERT INTO kyron_bloque VALUES (9, 'experienciaInvestigacion                          ', 'Bloque de gestion de experiencia en investigacion                                                                                                                                                                                                              ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (1, 'login                                             ', 'Bloque inicial para el ingreso a la plataforma de docencia                                                                                                                                                                                                     ', 'registro                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (2, 'banner                                            ', 'Banner principal para todos los usuarios                                                                                                                                                                                                                       ', 'gui                                                                                                                                                                                                     ');
+INSERT INTO kyron_bloque VALUES (3, 'pie                                               ', 'Pie de pagina para todos los usuarios                                                                                                                                                                                                                          ', 'gui                                                                                                                                                                                                     ');
+INSERT INTO kyron_bloque VALUES (4, 'menu                                              ', 'Menu                                                                                                                                                                                                                                                           ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (5, 'registrarDocente                                  ', 'Bloque que permite realizar el registro de un docente                                                                                                                                                                                                          ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (6, 'docentesconcarga                                  ', 'Reporte de docentes con carga academica                                                                                                                                                                                                                        ', 'reportes                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (7, 'titulosAcademicos                                 ', 'Gestion de titulos academicos de los docentes                                                                                                                                                                                                                  ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (8, 'sinTitulosAcademicos                              ', 'Bloque que permite realizar la gestion de docentes sin titulos                                                                                                                                                                                                 ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (10, 'experienciaDocencia                               ', 'Gestión de experiencia docente                                                                                                                                                                                                                                 ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (12, 'comunicacionCorta                                 ', 'Modulo que permite registrar y consultar las comunicaciones cortas                                                                                                                                                                                             ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (11, 'experienciaProfesional                            ', 'Gestion del Registro Experiencia Profesional del docente                                                                                                                                                                                                       ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (13, 'cartasEditor                                      ', 'Modulo que permite registrar y consultar las cartas al editor                                                                                                                                                                                                  ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (15, 'premiosDocente                                    ', 'Gestion de registro de los premios otorgados al docente                                                                                                                                                                                                        ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (16, 'registrarPatentes                                 ', 'Bloque para registrar patentes a docentes                                                                                                                                                                                                                      ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (14, 'indexacionRevistas                                ', 'Bloque de Publicacion Revistas                                                                                                                                                                                                                                 ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (17, 'registrarEmpresas                                 ', 'Bloque registrar empresas de base tecnologica                                                                                                                                                                                                                  ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (18, 'registrarTraducciones                             ', 'Bloque registrar traducciones a los docentes de tipo academico                                                                                                                                                                                                 ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (19, 'tecSofDocente                                     ', 'Bloque Registra la tecnologia y Software del Docente                                                                                                                                                                                                           ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (20, 'obrasartisticasDocente                            ', 'Bloque registra las obras Artisticas del docente                                                                                                                                                                                                               ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (21, 'ponenciaDocente                                   ', 'Bloque que permite el Regitro de las ponencias del docente                                                                                                                                                                                                     ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (22, 'publImprUnivDocente                               ', 'Bloque que permite el Registro de las Publiaciones Impresas Universitarias del Docente                                                                                                                                                                         ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (23, 'registroLibros                                    ', 'Bloque que permite gestionar el registro de libros                                                                                                                                                                                                             ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (24, 'estudiosDoctorales                                ', 'Bloque que permite el registro de Estudios Doctorales del docente                                                                                                                                                                                              ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (25, 'resenaCritica                                     ', 'Bloque que permite el registro de Reseñas Criticas del docente                                                                                                                                                                                                 ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (26, 'obrasartisticasLLDocente                          ', 'Bloque que permite el registro de obras Articas del docente                                                                                                                                                                                                    ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (27, 'traduccionesDocente                               ', 'Bloque que permite registrar las traducciones del docente                                                                                                                                                                                                      ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (28, 'registrarInterpretaciones                         ', 'Bloque que permite registrar interpretaciones musicales a un docente                                                                                                                                                                                           ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (29, 'direccionTrabajos                                 ', 'Bloque que permite registrar direccion de trabajos de maestria y doctorado                                                                                                                                                                                     ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (30, 'descargaInvestigacion                             ', 'Bloque que permite registrar horas de descarga por investigacion a docente                                                                                                                                                                                     ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (31, 'registrarMovilidadDocente                         ', 'Bloque que permite registrar movilida del Docente                                                                                                                                                                                                              ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (32, 'ingresarConvenios                                 ', 'Gestion de convenios                                                                                                                                                                                                                                           ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (33, 'ingresarExtension                                 ', 'Bloque que permite registrar actividades de extension a los docentes                                                                                                                                                                                           ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (34, 'actividadacademicaDocente                         ', 'Bloque que permite el registro de actividad academica del docente                                                                                                                                                                                              ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (35, 'invesdiciplinariasDocente                         ', 'Bloque que permite el registro de investigaciones diciplanarias del docente                                                                                                                                                                                    ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (36, 'avancesFinancieros                                ', 'Bloque que permite el registro de avances financieros de un docente vinculado ala universidad                                                                                                                                                                  ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (37, 'produccionvideosDocente                           ', 'Bloque que permite el registro de la producción de videos del docente                                                                                                                                                                                          ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (38, 'slider                                            ', 'Imagenes de la Universidad                                                                                                                                                                                                                                     ', 'gui                                                                                                                                                                                                     ');
+INSERT INTO kyron_bloque VALUES (39, 'experienciaCalificada                             ', 'Bloque para registrar puntaje a la experiencia calificada                                                                                                                                                                                                      ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (40, 'excelenciaAcademica                               ', 'Bloque para registrar la excelencia academica                                                                                                                                                                                                                  ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (41, 'experienciaDireccion                              ', 'Bloque que permite la gestion de la experiencia en direccion academica del Docente                                                                                                                                                                             ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (42, 'capituloLibros                                    ', 'Bloque que permite la gestion de capítulos de libros Docente                                                                                                                                                                                                   ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (43, 'gestorReportes                                    ', 'Bloque que permite gestionar los reportes                                                                                                                                                                                                                      ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (44, 'actividadAcademicaD                               ', 'Bloque que permite consultar actividad academica condor                                                                                                                                                                                                        ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (45, 'cuentaIndividual                                  ', 'Bloque que permite imprimir la cuenta individual                                                                                                                                                                                                               ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (47, 'estadoDocente                                     ', 'Bloque que permite la gestion estado Del Docente                                                                                                                                                                                                               ', 'docencia                                                                                                                                                                                                ');
+INSERT INTO kyron_bloque VALUES (48, 'novedades                                         ', 'Bloque que permite el registro de novedades                                                                                                                                                                                                                    ', 'docencia                                                                                                                                                                                                ');
+
+
+--
+-- TOC entry 2612 (class 0 OID 0)
+-- Dependencies: 348
+-- Name: kyron_bloque_id_bloque_seq; Type: SEQUENCE SET; Schema: public; Owner: kyron_frame
+--
+
+SELECT pg_catalog.setval('kyron_bloque_id_bloque_seq', 1, false);
+
+
+--
+-- TOC entry 2581 (class 0 OID 58451)
+-- Dependencies: 351
+-- Data for Name: kyron_bloque_pagina; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+INSERT INTO kyron_bloque_pagina VALUES (1, -1, -1, 'B', 1);
+INSERT INTO kyron_bloque_pagina VALUES (2, -1, -2, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (3, -1, -3, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (4, -1, -8, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (5, -2, -1, 'B', 1);
+INSERT INTO kyron_bloque_pagina VALUES (6, -2, -2, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (7, -2, -3, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (8, -2, -4, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (9, -3, -1, 'B', 1);
+INSERT INTO kyron_bloque_pagina VALUES (10, -3, -2, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (11, -3, -3, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (12, -3, -5, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (13, -4, -1, 'B', 1);
+INSERT INTO kyron_bloque_pagina VALUES (14, -4, -2, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (15, -4, -3, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (16, -4, -9, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (17, -5, -1, 'B', 1);
+INSERT INTO kyron_bloque_pagina VALUES (18, -5, -2, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (19, -5, -3, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (20, -5, -6, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (21, -6, -1, 'B', 1);
+INSERT INTO kyron_bloque_pagina VALUES (22, -6, -2, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (23, -6, -3, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (24, -6, -7, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (25, -7, -1, 'B', 1);
+INSERT INTO kyron_bloque_pagina VALUES (26, -7, -2, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (27, -7, -3, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (28, -7, -10, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (29, -8, -1, 'B', 1);
+INSERT INTO kyron_bloque_pagina VALUES (30, -8, -2, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (31, -8, -3, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (32, -8, -11, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (33, 1, 1, 'C', 0);
+INSERT INTO kyron_bloque_pagina VALUES (34, 2, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (35, 2, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (36, 3, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (37, 3, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (38, 2, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (39, 4, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (40, 4, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (41, 4, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (42, 5, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (43, 5, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (44, 5, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (45, 5, 5, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (46, 6, 6, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (47, 6, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (48, 6, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (49, 6, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (50, 7, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (51, 7, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (52, 7, 7, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (53, 7, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (54, 8, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (55, 8, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (56, 8, 8, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (57, 8, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (58, 9, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (59, 9, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (60, 9, 9, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (61, 9, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (62, 10, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (63, 10, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (64, 10, 10, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (65, 10, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (66, 11, 11, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (67, 11, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (68, 11, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (69, 11, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (70, 12, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (71, 12, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (72, 12, 12, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (73, 12, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (74, 13, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (75, 13, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (76, 13, 13, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (77, 13, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (78, 14, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (79, 14, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (80, 14, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (81, 14, 14, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (82, 15, 15, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (83, 15, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (84, 15, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (85, 15, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (86, 16, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (87, 16, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (88, 16, 16, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (89, 16, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (90, 17, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (91, 17, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (92, 17, 17, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (93, 17, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (94, 18, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (95, 18, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (96, 18, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (97, 18, 18, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (98, 19, 19, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (99, 19, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (100, 19, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (101, 19, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (102, 20, 20, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (103, 20, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (104, 20, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (105, 20, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (106, 21, 21, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (107, 21, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (108, 21, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (109, 21, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (110, 22, 22, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (111, 22, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (112, 22, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (113, 22, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (114, 23, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (115, 23, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (116, 23, 23, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (117, 23, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (118, 24, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (119, 24, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (120, 24, 24, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (121, 24, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (122, 25, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (123, 25, 4, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (124, 25, 25, 'C', 2);
+INSERT INTO kyron_bloque_pagina VALUES (125, 25, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (126, 26, 26, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (127, 26, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (128, 26, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (129, 26, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (130, 27, 27, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (131, 27, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (132, 27, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (133, 27, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (134, 28, 28, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (135, 28, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (136, 28, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (137, 28, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (138, 29, 29, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (139, 29, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (140, 29, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (141, 29, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (142, 30, 30, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (143, 30, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (144, 30, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (145, 30, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (146, 31, 31, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (147, 31, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (148, 31, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (149, 31, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (150, 32, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (151, 32, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (152, 32, 32, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (153, 32, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (154, 33, 33, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (155, 33, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (156, 33, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (157, 33, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (158, 34, 34, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (159, 34, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (160, 34, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (161, 34, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (162, 35, 35, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (163, 35, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (164, 35, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (165, 35, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (166, 36, 36, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (167, 36, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (168, 36, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (169, 36, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (170, 37, 37, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (171, 37, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (172, 37, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (173, 37, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (174, 2, 38, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (175, 40, 40, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (176, 40, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (177, 40, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (178, 40, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (179, 39, 39, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (180, 39, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (181, 39, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (182, 39, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (183, 41, 41, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (184, 41, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (185, 41, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (186, 41, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (187, 42, 42, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (188, 42, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (189, 42, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (190, 42, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (191, 43, 43, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (192, 43, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (193, 43, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (194, 43, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (195, 44, 44, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (196, 44, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (197, 44, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (198, 44, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (199, 45, 45, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (200, 45, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (201, 45, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (202, 45, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (203, 47, 47, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (204, 47, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (205, 47, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (206, 47, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (207, 48, 48, 'C', 1);
+INSERT INTO kyron_bloque_pagina VALUES (208, 48, 2, 'A', 1);
+INSERT INTO kyron_bloque_pagina VALUES (209, 48, 4, 'A', 2);
+INSERT INTO kyron_bloque_pagina VALUES (210, 48, 3, 'E', 1);
+INSERT INTO kyron_bloque_pagina VALUES (211, 49, 45, 'C', 1);
+
+
+--
+-- TOC entry 2613 (class 0 OID 0)
+-- Dependencies: 350
+-- Name: kyron_bloque_pagina_idrelacion_seq; Type: SEQUENCE SET; Schema: public; Owner: kyron_frame
+--
+
+SELECT pg_catalog.setval('kyron_bloque_pagina_idrelacion_seq', 211, true);
+
+
+--
+-- TOC entry 2583 (class 0 OID 58462)
+-- Dependencies: 353
+-- Data for Name: kyron_configuracion; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+INSERT INTO kyron_configuracion VALUES (1, 'dbesquema                                                                                                                                                                                                                                                      ', 'public                                                                                                                                                                                                                                                         ');
+INSERT INTO kyron_configuracion VALUES (2, 'prefijo                                                                                                                                                                                                                                                        ', 'kyron_                                                                                                                                                                                                                                                         ');
+INSERT INTO kyron_configuracion VALUES (3, 'nombreAplicativo                                                                                                                                                                                                                                               ', 'Kyron                                                                                                                                                                                                                                                          ');
+INSERT INTO kyron_configuracion VALUES (4, 'raizDocumento                                                                                                                                                                                                                                                  ', '/opt/lampp/htdocs/kyron                                                                                                                                                                                                                                        ');
+INSERT INTO kyron_configuracion VALUES (5, 'host                                                                                                                                                                                                                                                           ', 'http://localhost                                                                                                                                                                                                                                               ');
+INSERT INTO kyron_configuracion VALUES (6, 'site                                                                                                                                                                                                                                                           ', '/kyron                                                                                                                                                                                                                                                         ');
+INSERT INTO kyron_configuracion VALUES (7, 'nombreAdministrador                                                                                                                                                                                                                                            ', 'administrador                                                                                                                                                                                                                                                  ');
+INSERT INTO kyron_configuracion VALUES (8, 'claveAdministrador                                                                                                                                                                                                                                             ', 'Zhmek8aXuSCoaNh6JfqjyK98kVIKiBriILLKMrpe-K0                                                                                                                                                                                                                    ');
+INSERT INTO kyron_configuracion VALUES (9, 'correoAdministrador                                                                                                                                                                                                                                            ', 'fernandotower@gmail.com                                                                                                                                                                                                                                        ');
+INSERT INTO kyron_configuracion VALUES (10, 'enlace                                                                                                                                                                                                                                                         ', 'data                                                                                                                                                                                                                                                           ');
+INSERT INTO kyron_configuracion VALUES (11, 'estiloPredeterminado                                                                                                                                                                                                                                           ', 'cupertino                                                                                                                                                                                                                                                      ');
+INSERT INTO kyron_configuracion VALUES (12, 'moduloDesarrollo                                                                                                                                                                                                                                               ', 'moduloDesarrollo                                                                                                                                                                                                                                               ');
+INSERT INTO kyron_configuracion VALUES (13, 'googlemaps                                                                                                                                                                                                                                                     ', '                                                                                                                                                                                                                                                               ');
+INSERT INTO kyron_configuracion VALUES (14, 'recatchapublica                                                                                                                                                                                                                                                ', '                                                                                                                                                                                                                                                               ');
+INSERT INTO kyron_configuracion VALUES (15, 'recatchaprivada                                                                                                                                                                                                                                                ', '                                                                                                                                                                                                                                                               ');
+INSERT INTO kyron_configuracion VALUES (16, 'expiracion                                                                                                                                                                                                                                                     ', '5                                                                                                                                                                                                                                                              ');
+INSERT INTO kyron_configuracion VALUES (17, 'instalado                                                                                                                                                                                                                                                      ', 'true                                                                                                                                                                                                                                                           ');
+INSERT INTO kyron_configuracion VALUES (18, 'debugMode                                                                                                                                                                                                                                                      ', 'false                                                                                                                                                                                                                                                          ');
+INSERT INTO kyron_configuracion VALUES (19, 'dbPrincipal                                                                                                                                                                                                                                                    ', 'kyron                                                                                                                                                                                                                                                          ');
+INSERT INTO kyron_configuracion VALUES (20, 'hostSeguro                                                                                                                                                                                                                                                     ', 'https://localhost                                                                                                                                                                                                                                              ');
+
+
+--
+-- TOC entry 2614 (class 0 OID 0)
+-- Dependencies: 352
+-- Name: kyron_configuracion_id_parametro_seq; Type: SEQUENCE SET; Schema: public; Owner: kyron_frame
+--
+
+SELECT pg_catalog.setval('kyron_configuracion_id_parametro_seq', 20, true);
+
+
+--
+-- TOC entry 2585 (class 0 OID 58473)
+-- Dependencies: 355
+-- Data for Name: kyron_dbms; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+INSERT INTO kyron_dbms VALUES (1, 'estructura', 'pgsql', 'localhost', 5432, '', 'kyron', 'public', 'kyron_frame', 'c-0oX_0gwD4vXNOY6dSS6TkVks-UcuqAx1QrY9Rs4ps');
+
+
+--
+-- TOC entry 2615 (class 0 OID 0)
+-- Dependencies: 354
+-- Name: kyron_dbms_idconexion_seq; Type: SEQUENCE SET; Schema: public; Owner: kyron_frame
+--
+
+SELECT pg_catalog.setval('kyron_dbms_idconexion_seq', 1, true);
+
+
+--
+-- TOC entry 2586 (class 0 OID 58482)
+-- Dependencies: 356
+-- Data for Name: kyron_estilo; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+
+
+--
+-- TOC entry 2588 (class 0 OID 58490)
+-- Dependencies: 358
+-- Data for Name: kyron_logger; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+
+
+--
+-- TOC entry 2616 (class 0 OID 0)
+-- Dependencies: 357
+-- Name: kyron_logger_id_seq; Type: SEQUENCE SET; Schema: public; Owner: kyron_frame
+--
+
+SELECT pg_catalog.setval('kyron_logger_id_seq', 1, false);
+
+
+--
+-- TOC entry 2590 (class 0 OID 58496)
+-- Dependencies: 360
+-- Data for Name: kyron_pagina; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+INSERT INTO kyron_pagina VALUES (-1, 'development                                       ', 'Index módulo de desarrollo.                                                                                                                                                                                                                               ', 'development                                       ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (-2, 'cruder                                            ', 'Generador módulos CRUD.                                                                                                                                                                                                                                   ', 'development                                       ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (-3, 'desenlace                                         ', 'Analizar enlaces.                                                                                                                                                                                                                                         ', 'development                                       ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (-4, 'codificador                                       ', 'Codificar/decodificar cadenas.                                                                                                                                                                                                                            ', 'development                                       ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (-5, 'registro                                          ', 'Registrar páginas o módulos.                                                                                                                                                                                                                              ', 'development                                       ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (-6, 'constructor                                       ', 'Diseñar páginas.                                                                                                                                                                                                                                          ', 'development                                       ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (-7, 'plugin                                            ', 'Agregar plugin preconfigurados.                                                                                                                                                                                                                           ', 'development                                       ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (-8, 'saraFormCreator                                   ', 'Módulo SARA form creator.                                                                                                                                                                                                                                 ', 'development                                       ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (1, 'index                                             ', 'pagina principal                                                                                                                                                                                                                                          ', 'Principal                                         ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (2, 'indexAdministrador                                ', 'Pagina principal del rol administrador del sistema                                                                                                                                                                                                        ', 'administrador                                     ', 1, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (3, 'indexSecretaria                                   ', 'Pagina principal del rol secretaria del sistema                                                                                                                                                                                                           ', 'administrador                                     ', 2, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (4, 'indexJefe                                         ', 'Pagina Principal del Jefe de docencia                                                                                                                                                                                                                     ', 'jefe                                              ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (5, 'registroDocente                                   ', 'Pagina para el registro de docentes en el sistema                                                                                                                                                                                                         ', 'jefe                                              ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (6, 'docentesconcarga                                  ', 'Reporte de carga academica de los docentes                                                                                                                                                                                                                ', 'reportes                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (7, 'titulosAcademicos                                 ', 'Gestion de titulos academicos                                                                                                                                                                                                                             ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (9, 'experienciaInvestigacion                          ', 'Pagina para la gestion de experiencia en investigacion                                                                                                                                                                                                    ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (10, 'experienciaDocencia                               ', 'Gestión de la experiencia Docente                                                                                                                                                                                                                         ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (8, 'sinTitulosAcademicos                              ', 'Pagina para la gestion de docentes sin titulos academicos                                                                                                                                                                                                 ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (12, 'comunicacionCorta                                 ', 'Pagina que permite registrar y consultar comunicaciones cortas                                                                                                                                                                                            ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (13, 'cartasEditor                                      ', 'Pagina que permite registrar y consultar cartas al editor                                                                                                                                                                                                 ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (14, 'indexacionRevistas                                ', 'Gestión de las publiaciones de revistas Indexadas Docente                                                                                                                                                                                                 ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (15, 'premiosDocente                                    ', 'Pagina que permite el registro y consulta de los premios de los Docentes                                                                                                                                                                                  ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (11, 'experienciaProfesional                            ', 'Pagina que permite el  registro y consulta de  experiencia profesional del docente                                                                                                                                                                        ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (16, 'registrarPatentes                                 ', 'Gestion de la produccion de patentes de los docentes                                                                                                                                                                                                      ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (17, 'registrarEmpresas                                 ', 'Gestion de empresas de base tecnologica                                                                                                                                                                                                                   ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (18, 'registrarTraducciones                             ', 'Gestion de traducciones de recursos academicos                                                                                                                                                                                                            ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (19, 'tecSofDocente                                     ', 'Pagina que permite el registro de tecnologia y sotfware del docente                                                                                                                                                                                       ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (20, 'obrasartisticasDocente                            ', 'Pagina que permite el registro de Obras Artisticas del Docente                                                                                                                                                                                            ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (21, 'ponenciaDocente                                   ', 'Pagina que permite el registro de las ponencias del Docente                                                                                                                                                                                               ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (22, 'publImprUnivDocente                               ', 'Pagina que permite el Registro de las publiaciones Universitarias Impresas del Docente                                                                                                                                                                    ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (23, 'registroLibros                                    ', 'Pagina que permite consultar y registrar libros de los docentes                                                                                                                                                                                           ', 'docentes                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (24, 'estudiosDoctorales                                ', 'Pagina permite el registro de estudios doctorales del docente                                                                                                                                                                                             ', 'docentes                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (25, 'resenaCritica                                     ', 'Pagina que permite es registro de reseñas criticas del docente                                                                                                                                                                                            ', 'docentes                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (26, 'obrasartisticasLLDocente                          ', 'Pagina que permite el regitro de obras articas del docente                                                                                                                                                                                                ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (27, 'traduccionesDocente                               ', 'Pagina que pemite el registro de las traducciones del docente                                                                                                                                                                                             ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (28, 'registrarInterpretaciones                         ', 'Pagina para registrar interpretaciones musicales de un docente                                                                                                                                                                                            ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (29, 'direccionTrabajos                                 ', 'Pagina para registrar direccion de trabajos de grado para maestria y doctorado                                                                                                                                                                            ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (30, 'descargaInvestigacion                             ', 'Pagina para registrar descarga de horas por investigacion a docentes                                                                                                                                                                                      ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (31, 'registrarMovilidadDocente                         ', 'Pagina que permite el registro de movilidad del Docente                                                                                                                                                                                                   ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (32, 'ingresarConvenios                                 ', 'Modulo de gestion de convenios de docentes                                                                                                                                                                                                                ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (33, 'ingresarExtension                                 ', 'Pagina que permite resgistrar actividades de extension a los docentes                                                                                                                                                                                     ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (34, 'actividadacademicaDocente                         ', 'Pagin que permite el registro de actividad academica del Docente                                                                                                                                                                                          ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (35, 'invesdiciplinariasDocente                         ', 'Pagin que permite el registro de Investigaciones diciplinarias del Docente                                                                                                                                                                                ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (36, 'avancesFinancieros                                ', 'Pagina que permite registrar los avances financieros de un docente vinculado a la universidad                                                                                                                                                             ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (37, 'produccionvideosDocente                           ', 'Pagina que permite el registro de la producción de videos del Docente                                                                                                                                                                                     ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (40, 'excelenciaAcademica                               ', 'Pagina que realiza el registro de la excelencia academica                                                                                                                                                                                                 ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (39, 'experienciaCalificada                             ', 'Pagina que permite el registro de experiencia calificada y asignar el puntaje                                                                                                                                                                             ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (41, 'experienciaDireccion                              ', 'Pagina que permite el registro de experiencia en dirección academica del docente                                                                                                                                                                          ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (42, 'capituloLibros                                    ', 'Pagina que permite el registro de capítulos de libros del docente                                                                                                                                                                                         ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (43, 'gestorReportes                                    ', 'Pagina que permite gestionar los reportes                                                                                                                                                                                                                 ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (44, 'actividadAcademicaD                               ', 'Pagina que permite consultar actividad academica condor                                                                                                                                                                                                   ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (45, 'cuentaIndividual                                  ', 'Pagina que permite imprimir la cuenta individuals                                                                                                                                                                                                         ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (47, 'estadoDocente                                     ', 'Pagina que permite la gestion del Estado docente                                                                                                                                                                                                          ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (48, 'novedades                                         ', 'Pagina de registro de novedades                                                                                                                                                                                                                           ', 'docencia                                          ', 3, 'jquery=true                                                                                                                                                                                                                                                    ');
+INSERT INTO kyron_pagina VALUES (49, 'cuentaIndividualCondor                            ', 'Cuenta individual docentes condor                                                                                                                                                                                                                         ', 'docencia                                          ', 0, 'jquery=true                                                                                                                                                                                                                                                    ');
+
+
+--
+-- TOC entry 2617 (class 0 OID 0)
+-- Dependencies: 359
+-- Name: kyron_pagina_id_pagina_seq; Type: SEQUENCE SET; Schema: public; Owner: kyron_frame
+--
+
+SELECT pg_catalog.setval('kyron_pagina_id_pagina_seq', 1, false);
+
+
+--
+-- TOC entry 2595 (class 0 OID 58537)
+-- Dependencies: 365
+-- Data for Name: kyron_subsistema; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+
+
+--
+-- TOC entry 2618 (class 0 OID 0)
+-- Dependencies: 364
+-- Name: kyron_subsistema_id_subsistema_seq; Type: SEQUENCE SET; Schema: public; Owner: kyron_frame
+--
+
+SELECT pg_catalog.setval('kyron_subsistema_id_subsistema_seq', 1, false);
+
+
+--
+-- TOC entry 2596 (class 0 OID 58547)
+-- Dependencies: 366
+-- Data for Name: kyron_tempformulario; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'data                                                                                                ', 'bgORWR6181JEmOjLdOeuFGvk-kto5ODUI_6LqCO6HPJTEOKM6ywWnn5xIqV4sg', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'numIdentificacion                                                                                   ', '19169370', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'tipoIdentificacion                                                                                  ', '11', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'nombres                                                                                             ', 'Jose', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'apellidos                                                                                           ', 'Cely', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'genero                                                                                              ', '4', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'fechaNacimiento                                                                                     ', '04/02/2014', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'paisNacimiento                                                                                      ', '6', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'ciudadNacimiento                                                                                    ', '10', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'codigoInterno                                                                                       ', '2202', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'fechaIngreso                                                                                        ', '03/02/2014', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'resolucionNombramiento                                                                              ', '213213', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'documentoResolucion                                                                                 ', '2343424', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'dedicacion                                                                                          ', '10', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'fechaInicioAño                                                                                      ', '04/02/2014', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'documentoPrueba                                                                                     ', '324234324', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'documentoFinal                                                                                      ', '32424', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'documentoConcepto                                                                                   ', 'DOCUMENTO', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'facultad                                                                                            ', '0', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'categoriaActual                                                                                     ', '0', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'correoInstitucional                                                                                 ', 'fsdfsf@gmail.com', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'correoPersonal                                                                                      ', 'sdaasfadf@gmail.com', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'direccionResidencia                                                                                 ', 'sadadsada', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'telefonoFijo                                                                                        ', '223233', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'telefonoCelular                                                                                     ', '345435345', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'telefonoadicional                                                                                   ', '56464564', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'numeroActa                                                                                          ', '43535', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'fechaActa                                                                                           ', '04/02/2014', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'numeroCaso                                                                                          ', '43535', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'botonAceptar                                                                                        ', 'true', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'botonCancelar                                                                                       ', 'false', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'formSaraData                                                                                        ', 'cAORc9a481Iu4F0Bla_WNXIExNZRBuMPONRhuyOCFI_-1e0-TYCZS3SBFp9N34Z50sMQTQgJDNfECj-ywZeYwRqD8Ie7nlnavu_P4BabPbVvWwid5g', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'pagina                                                                                              ', 'registroDocente', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'usuario                                                                                             ', '1100003', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'action                                                                                              ', 'registrarDocente', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'solicitud                                                                                           ', 'procesarNuevo', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'bloque                                                                                              ', '5', '123                                               ');
+INSERT INTO kyron_tempformulario VALUES ('123                             ', 'registrarDocente                                                                                    ', 'bloqueGrupo                                                                                         ', 'docencia', '123                                               ');
+
+
+--
+-- TOC entry 2592 (class 0 OID 58511)
+-- Dependencies: 362
+-- Data for Name: kyron_usuario; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+INSERT INTO kyron_usuario VALUES (1100001, 'Administrador', 'Docencia', 'esanchez1988@gmail.com', '3018946', '                                                                                                                                                                                                                                                               ', '5994a993cbde3035b4c9cff8146e0cba62121c3b', '1', 'basico', 'es_es', 1);
+INSERT INTO kyron_usuario VALUES (1100002, 'Secretaria', 'Docencia', 'esanchez1988@gmail.com', '3018616', '                                                                                                                                                                                                                                                               ', '5994a993cbde3035b4c9cff8146e0cba62121c3b', '2', 'basico', 'es_es', 1);
+INSERT INTO kyron_usuario VALUES (1100003, 'Jefe Oficina', 'Docencia', 'esanchez1988@gmail.com', '3018946', '                                                                                                                                                                                                                                                               ', '5994a993cbde3035b4c9cff8146e0cba62121c3b', '3', 'basico', 'es_es', 1);
+INSERT INTO kyron_usuario VALUES (19169370, 'Jose Eugenio', 'Cely Fajardo', 'jecelyf@hotmail.com', '', '                                                                                                                                                                                                                                                               ', '2735e4d12fa4b004b508bf043107c524c950e310', '3', 'basico', 'es_es', 1);
+INSERT INTO kyron_usuario VALUES (52261563, 'Johanna', 'Giraldo Pena', 'docencia@udistrital.edu.co', '', '                                                                                                                                                                                                                                                               ', 'b15000942f043d3afa02621df4b1a4bd1f45b945', '3', 'basico', 'es_es', 1);
+
+
+--
+-- TOC entry 2619 (class 0 OID 0)
+-- Dependencies: 361
+-- Name: kyron_usuario_id_usuario_seq; Type: SEQUENCE SET; Schema: public; Owner: kyron_frame
+--
+
+SELECT pg_catalog.setval('kyron_usuario_id_usuario_seq', 1, false);
+
+
+--
+-- TOC entry 2593 (class 0 OID 58529)
+-- Dependencies: 363
+-- Data for Name: kyron_usuario_subsistema; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+
+
+--
+-- TOC entry 2597 (class 0 OID 58553)
+-- Dependencies: 367
+-- Data for Name: kyron_valor_sesion; Type: TABLE DATA; Schema: public; Owner: kyron_frame
+--
+
+INSERT INTO kyron_valor_sesion VALUES ('acf49b3cd45316ce1093ba0427bc89ed', 'idUsuario           ', '1100001                                                                                                                                                                                                                                                        ', 1439224777);
+
+
+--
+-- TOC entry 2456 (class 2606 OID 58459)
+-- Name: kyron_bloque_pagina_pkey; Type: CONSTRAINT; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+ALTER TABLE ONLY kyron_bloque_pagina
+    ADD CONSTRAINT kyron_bloque_pagina_pkey PRIMARY KEY (idrelacion);
+
+
+--
+-- TOC entry 2454 (class 2606 OID 58448)
+-- Name: kyron_bloque_pkey; Type: CONSTRAINT; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+ALTER TABLE ONLY kyron_bloque
+    ADD CONSTRAINT kyron_bloque_pkey PRIMARY KEY (id_bloque);
+
+
+--
+-- TOC entry 2458 (class 2606 OID 58470)
+-- Name: kyron_configuracion_pkey; Type: CONSTRAINT; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+ALTER TABLE ONLY kyron_configuracion
+    ADD CONSTRAINT kyron_configuracion_pkey PRIMARY KEY (id_parametro);
+
+
+--
+-- TOC entry 2460 (class 2606 OID 58481)
+-- Name: kyron_dbms_pkey; Type: CONSTRAINT; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+ALTER TABLE ONLY kyron_dbms
+    ADD CONSTRAINT kyron_dbms_pkey PRIMARY KEY (idconexion);
+
+
+--
+-- TOC entry 2462 (class 2606 OID 58487)
+-- Name: kyron_estilo_pkey; Type: CONSTRAINT; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+ALTER TABLE ONLY kyron_estilo
+    ADD CONSTRAINT kyron_estilo_pkey PRIMARY KEY (usuario, estilo);
+
+
+--
+-- TOC entry 2464 (class 2606 OID 58508)
+-- Name: kyron_pagina_pkey; Type: CONSTRAINT; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+ALTER TABLE ONLY kyron_pagina
+    ADD CONSTRAINT kyron_pagina_pkey PRIMARY KEY (id_pagina);
+
+
+--
+-- TOC entry 2468 (class 2606 OID 58546)
+-- Name: kyron_subsistema_pkey; Type: CONSTRAINT; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+ALTER TABLE ONLY kyron_subsistema
+    ADD CONSTRAINT kyron_subsistema_pkey PRIMARY KEY (id_subsistema);
+
+
+--
+-- TOC entry 2466 (class 2606 OID 58528)
+-- Name: kyron_usuario_pkey; Type: CONSTRAINT; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+ALTER TABLE ONLY kyron_usuario
+    ADD CONSTRAINT kyron_usuario_pkey PRIMARY KEY (id_usuario);
+
+
+--
+-- TOC entry 2470 (class 2606 OID 58558)
+-- Name: kyron_valor_sesion_pkey; Type: CONSTRAINT; Schema: public; Owner: kyron_frame; Tablespace: 
+--
+
+ALTER TABLE ONLY kyron_valor_sesion
+    ADD CONSTRAINT kyron_valor_sesion_pkey PRIMARY KEY (sesionid, variable);
+
+
+--
+-- TOC entry 2603 (class 0 OID 0)
+-- Dependencies: 7
+-- Name: public; Type: ACL; Schema: -; Owner: kyron_frame
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM kyron_frame;
+GRANT ALL ON SCHEMA public TO kyron_frame;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2015-08-10 11:37:13 COT
+
+--
+-- PostgreSQL database dump complete
+--
+
