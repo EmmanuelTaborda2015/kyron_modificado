@@ -1,3 +1,5 @@
+<script src="http://localhost/kyron/plugin/scripts/javascript/jquery.js" type="text/javascript"></script>
+
 <?php
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  AES implementation in PHP                                                                     */

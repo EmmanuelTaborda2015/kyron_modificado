@@ -2290,3 +2290,4 @@ class PHPExcel_Calculation_Financial {
 	}	//	function YIELDMAT()
 
 }	//	class PHPExcel_Calculation_Financial
+?>

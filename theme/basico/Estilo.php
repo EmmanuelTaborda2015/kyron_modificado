@@ -1,12 +1,12 @@
 <?php
 $indice = 0;
 // $estilo [$indice] = "general.css";
-// $indice ++;
+$indice ++;
 // $estilo [$indice] = "estiloCuadrosMensaje.css";
-// $indice ++;
+$indice ++;
 // $estilo [$indice] = "estiloTexto.css";
-// $indice ++;
-// $estilo [$indice] = "estiloFormulario.css";
+$indice ++;
+$estilo [$indice] = "estiloFormulario.css";
 $indice ++;
 
 $host = $this->miConfigurador->getVariableConfiguracion ( "host" );

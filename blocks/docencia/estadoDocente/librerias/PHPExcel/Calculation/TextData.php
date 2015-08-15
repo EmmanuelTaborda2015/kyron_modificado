@@ -587,3 +587,4 @@ class PHPExcel_Calculation_TextData {
 	}	//	function TEXTFORMAT()
 
 }	//	class PHPExcel_Calculation_TextData
+?>

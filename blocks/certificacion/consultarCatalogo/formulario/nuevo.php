@@ -115,7 +115,7 @@ if($registro)
 }
 
 echo $this->miFormulario->division("fin");
-
+?>
 
 
 

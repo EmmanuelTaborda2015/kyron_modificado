@@ -3649,3 +3649,4 @@ class PHPExcel_Calculation_Statistical {
 	}	//	function ZTEST()
 
 }	//	class PHPExcel_Calculation_Statistical
+?>

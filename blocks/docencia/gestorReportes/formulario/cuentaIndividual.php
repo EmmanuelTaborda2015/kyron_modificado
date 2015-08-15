@@ -1,4 +1,4 @@
-<?php
+<?php 
 if (!isset($GLOBALS ["autorizado"])) {
     include ("../index.php");
     exit();
@@ -46,26 +46,26 @@ ob_start();
         font-size:10px
     }
 </style>
-<form method="post" action='index.php' name='<? echo $this->formulario; ?>' >
-    <h1>Liquidación Cuota Parte para la Entidad <? echo $datos_basicos['entidad_nombre'] ?> </h1>
+<form method="post" action='index.php' name='<?php  echo $this->formulario; ?>' >
+    <h1>Liquidación Cuota Parte para la Entidad <?php  echo $datos_basicos['entidad_nombre'] ?> </h1>
 
     <center>
         <table class='bordered'  width ="68%">
             <thead>
                 <tr>
                     <th  class='encabezado_registro' width="15%" colspan="1" rowspan="2">
-                        <img alt="Imagen" width="70%" src="<? echo $this->configuracion["host"] . $this->configuracion["site"] . $this->configuracion["bloques"] ?>/nomina/cuotas_partes/Images/escudo1.png" />
+                        <img alt="Imagen" width="70%" src="<?php  echo $this->configuracion["host"] . $this->configuracion["site"] . $this->configuracion["bloques"] ?>/nomina/cuotas_partes/Images/escudo1.png" />
                     </th>
                     <th  colspan="1" style="font-size:14px;" class='subtitulo_th centrar'>
                         <br>UNIVERSIDAD DISTRITAL FRANCISCO JOSÉ DE CALDAS
                         <br> NIT 899999230-7<br><br>
                         Detalle Cuenta de Cobro 
-                        <br><? echo $consecu_cc ?><br><br>
+                        <br><?php  echo $consecu_cc ?><br><br>
                     </th>
                 </tr>
                 <tr>
                     <th colspan="1" style="font-size:12px;" class='subtitulo_th2'>
-                        <?
+                        <?php 
                         $dias = array("Domingo, ", "Lunes, ", "Martes, ", "Miercoles, ", "Jueves, ", "Viernes, ", "Sábado, ");
                         $meses = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
                         echo "Bogotá D.C, " . $fecha_cc = $dias[date('w')] . " " . date('d') . " de " . $meses[date('n') - 1] . " del " . date('Y');
@@ -77,15 +77,15 @@ ob_start();
 
             <tr>
                 <td class='texto_elegante estilo_td' >Entidad Concurrente:</td>
-                <td class='texto_elegante estilo_td ' colspan='1'><? echo'&nbsp;&nbsp;' . $datos_basicos['entidad_nombre'] ?></td>
+                <td class='texto_elegante estilo_td ' colspan='1'><?php  echo'&nbsp;&nbsp;' . $datos_basicos['entidad_nombre'] ?></td>
             </tr>
             <tr> 
                 <td class='texto_elegante estilo_td' >NIT:</td>
-                <td class='texto_elegante estilo_td' colspan='1'><? echo '&nbsp;&nbsp;' . $datos_basicos['entidad'] ?></td>
+                <td class='texto_elegante estilo_td' colspan='1'><?php  echo '&nbsp;&nbsp;' . $datos_basicos['entidad'] ?></td>
             </tr>
             <tr> 
                 <td class='texto_elegante estilo_td' >Fecha Corte Cuenta:</td>
-                <td class='texto_elegante estilo_td' colspan="2"><? echo '&nbsp;&nbsp' . $fecha_cobro ?></td>
+                <td class='texto_elegante estilo_td' colspan="2"><?php  echo '&nbsp;&nbsp' . $fecha_cobro ?></td>
             </tr>
         </table> </center>
     <br>
@@ -93,15 +93,15 @@ ob_start();
         <table class='bordered'  width ="60%">
             <tr>
                 <td class='texto_elegante estilo_td' >Nombre Pensionado:</td>
-                <td class='texto_elegante estilo_td ' colspan='1'><? echo'&nbsp;&nbsp;' . $datos_basicos['nombre_emp'] ?></td>
+                <td class='texto_elegante estilo_td ' colspan='1'><?php  echo'&nbsp;&nbsp;' . $datos_basicos['nombre_emp'] ?></td>
                 <td class='texto_elegante estilo_td' >Documento Pensionado:</td>
-                <td class='texto_elegante estilo_td ' colspan='1'><? echo'&nbsp;&nbsp;' . $datos_basicos['cedula'] ?></td>
+                <td class='texto_elegante estilo_td ' colspan='1'><?php  echo'&nbsp;&nbsp;' . $datos_basicos['cedula'] ?></td>
             </tr>
             <tr>
                 <td class='texto_elegante estilo_td' >Nombre Sustituto:</td>
-                <td class='texto_elegante estilo_td ' colspan='1'><? echo'&nbsp;&nbsp;' ?></td>
+                <td class='texto_elegante estilo_td ' colspan='1'><?php  echo'&nbsp;&nbsp;' ?></td>
                 <td class='texto_elegante estilo_td' >Documento Sustituto:</td>
-                <td class='texto_elegante estilo_td ' colspan='1'><? echo'&nbsp;&nbsp;' ?></td>
+                <td class='texto_elegante estilo_td ' colspan='1'><?php  echo'&nbsp;&nbsp;' ?></td>
             </tr>
         </table>
     </center>
@@ -123,7 +123,7 @@ ob_start();
                 <th class='subtitulo_th centrar'>TOTAL MES</th>
             </tr>
             <tbody id="itemContainer">
-                <?
+                <?php 
                 if (is_array($liquidacion)) {
                 foreach ($liquidacion as $key => $value) {
 
@@ -171,7 +171,7 @@ ob_start();
                 <th class='subtitulo_th centrar'>INTERES LEY 1066/2006</th>
                 <th class='subtitulo_th centrar'>ACUMULADO INTERES</th>
             </tr>
-            <?
+            <?php 
             if (is_array($totales_liquidacion)) {
 
             foreach ($totales_liquidacion as $key => $values) {
@@ -201,7 +201,7 @@ ob_start();
             ?>
             <tr>
                 <th class='subtitulo_th2' colspan="1">TOTAL&nbsp;&nbsp;</th>
-                <td class='texto_elegante estilo_td3' colspan="8" style='text-align:center'><? echo " $ " . number_format($total[0]) ?></td>
+                <td class='texto_elegante estilo_td3' colspan="8" style='text-align:center'><?php  echo " $ " . number_format($total[0]) ?></td>
             </tr>
         </table>
     </center>
@@ -218,7 +218,7 @@ ob_start();
                 <th class = 'subtitulo_th centrar'>SUMAFIJA</th>
             </tr>
             <tbody id="itemContainer2">
-                <?
+                <?php 
                 foreach ($detalle_indice as $key => $values) {
                 echo "<tr>";
                 echo " <td class='texto_elegante estilo_td' style='text-align:center;'>" . $detalle_indice[$key]['vigencia'] . "</td> ";
@@ -240,7 +240,7 @@ ob_start();
             </tr>
             <tr>
                 <td class = 'estilo_td' align = center style = "font-size:12px" colspan = "9">
-                    <? echo $jefeRecursos[0][0] ?>
+                    <?php  echo $jefeRecursos[0][0] ?>
                     <br>Jefe(a) División de Recursos Humanos
                 </td>
             </tr>
@@ -258,12 +258,12 @@ ob_start();
         <input id="generarBoton" type="submit" class="navbtn" value="Generar PDF">
         <input type='hidden' name='no_pagina' value="liquidadorCP">
         <input type='hidden' name='opcion' value='pdf_detalle'>
-        <input type="hidden" name='datos_basicos' value='<?php echo serialize($datos_basicos) ?>'>
-        <input type="hidden" name='totales_liquidacion' value='<?php echo serialize($totales_liquidacion) ?>'>
-        <input type="hidden" name='detalle_indice' value='<?php echo serialize($detalle_indice) ?>'>
-        <input type="hidden" name='liquidacion' value='<?php echo serialize($liquidacion) ?>'>
-        <input type="hidden" name='consecutivo' value='<?php echo $consecu_cc ?>'>
-        <input type="hidden" name='fecha_cobro' value='<?php echo $fecha_cobro ?>'>
-        <input type="hidden" name='jRecursos' value='<?php echo $jefeRecursos[0][0] ?>'>
+        <input type="hidden" name='datos_basicos' value='<?php  echo serialize($datos_basicos) ?>'>
+        <input type="hidden" name='totales_liquidacion' value='<?php  echo serialize($totales_liquidacion) ?>'>
+        <input type="hidden" name='detalle_indice' value='<?php  echo serialize($detalle_indice) ?>'>
+        <input type="hidden" name='liquidacion' value='<?php  echo serialize($liquidacion) ?>'>
+        <input type="hidden" name='consecutivo' value='<?php  echo $consecu_cc ?>'>
+        <input type="hidden" name='fecha_cobro' value='<?php  echo $fecha_cobro ?>'>
+        <input type="hidden" name='jRecursos' value='<?php  echo $jefeRecursos[0][0] ?>'>
     </div>
 </form>

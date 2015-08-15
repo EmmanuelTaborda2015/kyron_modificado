@@ -612,3 +612,4 @@ class PHPExcel_Calculation_FormulaParser {
 		}
     }
 }
+?>

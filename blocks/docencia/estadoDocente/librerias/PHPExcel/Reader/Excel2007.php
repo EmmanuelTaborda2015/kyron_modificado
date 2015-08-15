@@ -1980,3 +1980,4 @@ class PHPExcel_Reader_Excel2007 extends PHPExcel_Reader_Abstract implements PHPE
 		return ($value === 'true' || $value === 'TRUE') ? TRUE : FALSE;
 	}
 }
+?>

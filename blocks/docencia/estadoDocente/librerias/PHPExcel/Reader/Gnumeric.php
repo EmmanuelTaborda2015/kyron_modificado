@@ -871,3 +871,4 @@ class PHPExcel_Reader_Gnumeric extends PHPExcel_Reader_Abstract implements PHPEx
 	}
 
 }
+?>

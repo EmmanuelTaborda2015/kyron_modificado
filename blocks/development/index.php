@@ -1,4 +1,4 @@
-<?
+<?php
 // Listado de posibles fuentes para la direcci&oacute;n IP, en orden de prioridad
 $fuentes_ip = array (
         "HTTP_X_FORWARDED_FOR",
@@ -33,7 +33,7 @@ $proxy_ip = (isset ( $proxy_ip )) ? $proxy_ip : @getenv ( "REMOTE_ADDR" );
 		<tr>
 			<td><h3>
 					Se ha creado un registro de acceso ilegal desde la
-					direcci&oacute;n: <b><? echo $proxy_ip ?></b>.
+					direcci&oacute;n: <b><?php echo $proxy_ip ?></b>.
 				</h3></td>
 		</tr>
 		<tr>

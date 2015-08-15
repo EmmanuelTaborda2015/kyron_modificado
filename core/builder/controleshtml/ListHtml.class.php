@@ -102,3 +102,4 @@ class ListHTML extends HtmlBase {
 		return true;
 	}
 }
+?>

@@ -1,5 +1,7 @@
 $('.box_skitter').skitter(
                        {
+                    	   
+                    	   
                                label: false,
                                dots: true,
                                 controls_position: "rightTop",
@@ -7,6 +9,7 @@ $('.box_skitter').skitter(
                                 controls: false,
                                 progressbar: false
                        }
+                       
                        );
 
-       
+

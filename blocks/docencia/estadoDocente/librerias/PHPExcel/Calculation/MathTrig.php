@@ -1367,3 +1367,4 @@ class PHPExcel_Calculation_MathTrig {
 	}	//	function TRUNC()
 
 }	//	class PHPExcel_Calculation_MathTrig
+?>

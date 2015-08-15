@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * index.php
  *
@@ -43,7 +43,7 @@ $proxy_ip = (isset ( $proxy_ip )) ? $proxy_ip : @getenv ( "REMOTE_ADDR" );
 			<td>
 				<h3>
 					Se ha creado un registro de acceso ilegal desde la
-					direcci&oacute;n: <b><? echo $proxy_ip ?></b>.
+					direcci&oacute;n: <b><?php echo $proxy_ip ?></b>.
 				</h3>
 			</td>
 		</tr>

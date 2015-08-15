@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 
 if (isset ( $_REQUEST ['botonAceptar'] )) {
@@ -60,22 +60,22 @@ if (isset ( $_REQUEST ['botonAceptar'] )) {
                     		<td align="center">secci&oacute;n</td>
                     		<td align="center">posici&oacute;n</td>
                     	</tr>	
-                <?
+                <?php 
                 for($contador = 0; $contador < count ( $registro ); $contador ++) {
                     ?>
                     <tr bgcolor="#ECECEC">
-                		<td><? echo $registro[$contador][0] ?></td>
-                		<td><? echo $registro[$contador][3] ?></td>
-                		<td><? echo $registro[$contador][1] ?></td>
-                		<td><? echo $registro[$contador][2] ?></td>
+                		<td><?php  echo $registro[$contador][0] ?></td>
+                		<td><?php  echo $registro[$contador][3] ?></td>
+                		<td><?php  echo $registro[$contador][1] ?></td>
+                		<td><?php  echo $registro[$contador][2] ?></td>
                 	</tr>	
-                    <?
+                    <?php 
                 }
                 ?>
                                 </table>
                     </div>
 
-<?
+<?php 
             }
         }
     }

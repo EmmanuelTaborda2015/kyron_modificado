@@ -1,12 +1,12 @@
 
- $(function() {
- 	
- 	$("#ActualizarDatos").validationEngine({
-		promptPosition : "centerRight",
-		scroll : false
-	});
- 	
-}); 
+// $(function() {
+// 	
+// 	$('#ActualizarDatos').validationEngine({
+//		promptPosition : "centerRight",
+//		scroll : false
+//	});
+// 	
+//}); 
 
 
 

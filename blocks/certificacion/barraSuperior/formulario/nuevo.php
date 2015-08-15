@@ -7,6 +7,6 @@ $rutaBloque.= $esteBloque['grupo'] . "/" . $esteBloque['nombre'];
 ?>
 <div class="barra_separadora">
     <p class="textoNombre">Gestor de Certificados - Universidad Distrital 
-        <img class="fotoUsuario" src="<? echo $rutaBloque . "/imagenesTemp/impresora.png" ?>">
+        <img class="fotoUsuario" src="<?php echo $rutaBloque . "/imagenesTemp/impresora.png" ?>">
     </p>        
 </div>

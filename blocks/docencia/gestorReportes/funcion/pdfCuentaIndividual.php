@@ -212,3 +212,4 @@ $PDF->writeHTML($ContenidoPdf);
 clearstatcache();
 $PDF->Output("CuentadeCobro_" . $datos_basicos['cedula'] . "_" . $datos_basicos['entidad_nombre'] . ".pdf", "D");
 
+?>

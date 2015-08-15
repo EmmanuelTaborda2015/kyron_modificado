@@ -1,6 +1,7 @@
 <?php
 
 $indice=0;
+$funcion[$indice++]="jquery.js";
 $funcion[$indice++]="jquery.dcmegamenu.1.3.3.js";
 $funcion[$indice++]="jquery.dcmegamenu.1.3.3.min.js";
 $funcion[$indice++]="jquery.hoverIntent.minified.js";

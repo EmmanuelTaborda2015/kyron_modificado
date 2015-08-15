@@ -1,3 +1,4 @@
+
 <?php
 $esteBloque = $this->miConfigurador->getVariableConfiguracion ( "esteBloque" );
 

@@ -1,4 +1,4 @@
-<?
+<?php 
 if (isset ( $_REQUEST ["aceptarA"] )) {
     
     require_once ("../config/configDesenlace.class.php");
@@ -50,21 +50,21 @@ if (isset ( $_REQUEST ["aceptarA"] )) {
 		<td align="center">secci&oacute;n</td>
 		<td align="center">posici&oacute;n</td>
 	</tr>	
-                <?
+                <?php 
             for($contador = 0; $contador < count ( $registro ); $contador ++) {
                 ?>
                     <tr bgcolor="#ECECEC">
-		<td><? echo $registro[$contador][0] ?></td>
-		<td><? echo $registro[$contador][3] ?></td>
-		<td><? echo $registro[$contador][1] ?></td>
-		<td><? echo $registro[$contador][2] ?></td>
+		<td><?php  echo $registro[$contador][0] ?></td>
+		<td><?php  echo $registro[$contador][3] ?></td>
+		<td><?php  echo $registro[$contador][1] ?></td>
+		<td><?php  echo $registro[$contador][2] ?></td>
 	</tr>	
-                    <?
+                    <?php 
             }
             ?>
             </table>
 <hr>
-P&aacute;gina generada autom&aacute;ticamente el: <? echo @date("d/m/Y", time()) ?><br>
+P&aacute;gina generada autom&aacute;ticamente el: <?php  echo @date("d/m/Y", time()) ?><br>
 Ambiente de desarrollo para aplicaciones web. - Software amparado por
 licencia GPL. Copyright (c) 2004-2006.
 <br>
@@ -73,13 +73,13 @@ Caldas.
 <br>
 <hr>
 
-<?
+<?php 
         }
     } else {
         echo "La p&aacute;gina no se encuentra registrada en el sistema<br>";
         ?>
 <hr>
-P&aacute;gina generada autom&aacute;ticamente el: <? echo @date("d/m/Y", time()) ?><br>
+P&aacute;gina generada autom&aacute;ticamente el: <?php  echo @date("d/m/Y", time()) ?><br>
 Ambiente de desarrollo para aplicaciones web. - Software amparado por
 licencia GPL. Copyright (c) 2004-2006.
 <br>
@@ -87,7 +87,7 @@ Paulo Cesar Coronado - Universidad Distrital Francisco Jos&eacute; de
 Caldas.
 <br>
 <hr>
-<?
+<?php 
     }
 }
 ?><form method="post" action="desenlace.php" name="desenlazar">

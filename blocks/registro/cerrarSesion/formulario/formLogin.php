@@ -53,7 +53,7 @@ $tab = 1;
             <tr>
                 <td width="200px" height="300px">
                     <div style=' border:0px solid; width:250px; height:225px; cursor:pointer;' onclick="location.href='http://www.udistrital.edu.co'">
-                        <img src="<?= $directorio ?>formulario/sabio.png" align="bottom" border="0" />
+                        <img src="<?php = $directorio ?>formulario/sabio.png" align="bottom" border="0" />
                     </div>
                 </td>
                 <td colspan="3" valign="top" align='left' >
@@ -73,7 +73,7 @@ $tab = 1;
 
                     </div> 
                     <div name="condor" style="position: relative; width: 200px; top: 60px; left: 380px; cursor: pointer; color: DarkSlateGray;" id="condor" >	
-                        <img src="<?= $directorio ?>formulario/condor.png" width='250' height='120' border="0" align='center' />
+                        <img src="<?php = $directorio ?>formulario/condor.png" width='250' height='120' border="0" align='center' />
                     </div>
                 </td> 
             </tr>
@@ -117,7 +117,7 @@ $tab = 1;
                                             </td>
                                         </tr>
                                         <div class="campoCuadroTexto">
-                                            <input id="formSaraData" type="hidden" value="<?= $valorCodificado ?>" name="formSaraData">
+                                            <input id="formSaraData" type="hidden" value="<?php  = $valorCodificado ?>" name="formSaraData">
                                         </div>
 
                                     </table>

@@ -1,0 +1,13 @@
+
+#box_skitter{
+
+    background: url(../imagen/001.jpg) no-repeat; 
+    display: block; 
+    float:true; 
+    height: 55%;
+    overflow: hidden;
+    text-align: center;
+    text-indent: -9999%;
+    width: 100%;
+}
+

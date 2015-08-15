@@ -813,3 +813,4 @@ if ((!function_exists('mb_str_replace')) &&
 		return $subject;
 	}
 }
+?>

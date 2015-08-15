@@ -956,3 +956,4 @@ $html2pdf->pdf->SetDisplayMode('fullpage');
 $html2pdf->WriteHTML($ContenidoPdf);
 clearstatcache();
 $html2pdf->Output('EstadoCuenta_"' . $arreglo . '".pdf', 'D');
+?>

@@ -1,4 +1,4 @@
-<?
+<?php
 echo "historico General";
 
 // var_dump($_REQUEST['datos']);exit;

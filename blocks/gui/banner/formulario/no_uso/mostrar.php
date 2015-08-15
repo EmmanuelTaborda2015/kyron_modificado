@@ -37,83 +37,83 @@ if(isset($certificado)&&$certificado=="BloqueEjemploAjax") {
             ?><div id="imagenCentral">
     <table cellpadding="0" border="0" cellspacing="0">
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_0.png" style="width: 107px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_1.png" style="width: 173px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_2.png" style="width: 35px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_3.png" style="width: 31px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_4.png" style="width: 11px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_5.png" style="width: 31px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_6.png" style="width: 10px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_7.png" style="width: 30px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_8.png" style="width: 130px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_9.png" style="width: 79px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_10.png" style="width: 101px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_11.png" style="width: 93px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_12.png" style="width: 93px;  height: 59px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_0_13.png" style="width: 76px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_0.png" style="width: 107px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_1.png" style="width: 173px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_2.png" style="width: 35px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_3.png" style="width: 31px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_4.png" style="width: 11px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_5.png" style="width: 31px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_6.png" style="width: 10px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_7.png" style="width: 30px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_8.png" style="width: 130px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_9.png" style="width: 79px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_10.png" style="width: 101px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_11.png" style="width: 93px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_12.png" style="width: 93px;  height: 59px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_0_13.png" style="width: 76px;  height: 59px; border-width: 0px;"></td>
         </tr>
 
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_0.png" style="width: 107px;  height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_1.png"  style="width: 173px; height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_2.png"  style="width: 35px; height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_3.png"  style="width: 31px; height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_4.png"  style="width: 11px; height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_5.png"  style="width: 31px; height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_6.png"  style="width: 10px; height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_7.png"  style="width: 30px; height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_8.png"  style="width: 130px; height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_9.png"  style="width: 79px; height: 77px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_10.png"  style="width: 101px; height: 77px; border-width: 0px;" usemap="#informacionConferencia" id="informacionConferencia"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_11.png"  style="width: 93px; height: 77px; border-width: 0px;"   usemap="#inscripcionConferencia" id="inscripcionConferencia"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_12.png"  style="width: 93px; height: 77px; border-width: 0px;"   usemap="#calendarioConferencia" id="calendarioConferencia"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_1_13.png" style="width: 76px;  height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_0.png" style="width: 107px;  height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_1.png"  style="width: 173px; height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_2.png"  style="width: 35px; height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_3.png"  style="width: 31px; height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_4.png"  style="width: 11px; height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_5.png"  style="width: 31px; height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_6.png"  style="width: 10px; height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_7.png"  style="width: 30px; height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_8.png"  style="width: 130px; height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_9.png"  style="width: 79px; height: 77px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_10.png"  style="width: 101px; height: 77px; border-width: 0px;" usemap="#informacionConferencia" id="informacionConferencia"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_11.png"  style="width: 93px; height: 77px; border-width: 0px;"   usemap="#inscripcionConferencia" id="inscripcionConferencia"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_12.png"  style="width: 93px; height: 77px; border-width: 0px;"   usemap="#calendarioConferencia" id="calendarioConferencia"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_1_13.png" style="width: 76px;  height: 77px; border-width: 0px;"></td>
         </tr>
 
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_0.png" style="width: 107px;  height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_1.png"  style="width: 173px; height: 21px; border-width: 0px;"  usemap="#semana" id="semana"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_2.png"  style="width: 35px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_3.png"  style="width: 31px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_4.png"  style="width: 11px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_5.png"  style="width: 31px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_6.png"  style="width: 10px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_7.png"  style="width: 30px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_8.png"  style="width: 130px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_9.png"  style="width: 79px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_10.png"  style="width: 101px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_11.png"  style="width: 93px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_12.png"  style="width: 93px; height: 21px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_2_13.png" style="width: 76px;  height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_0.png" style="width: 107px;  height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_1.png"  style="width: 173px; height: 21px; border-width: 0px;"  usemap="#semana" id="semana"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_2.png"  style="width: 35px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_3.png"  style="width: 31px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_4.png"  style="width: 11px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_5.png"  style="width: 31px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_6.png"  style="width: 10px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_7.png"  style="width: 30px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_8.png"  style="width: 130px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_9.png"  style="width: 79px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_10.png"  style="width: 101px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_11.png"  style="width: 93px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_12.png"  style="width: 93px; height: 21px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_2_13.png" style="width: 76px;  height: 21px; border-width: 0px;"></td>
         </tr>
 
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_0.png" style="width: 107px;  height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_1.png"  style="width: 173px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_2.png"  style="width: 35px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_3.png"  style="width: 31px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_4.png"  style="width: 11px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_5.png"  style="width: 31px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_6.png"  style="width: 10px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_7.png"  style="width: 30px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_8.png"  style="width: 130px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_9.png"  style="width: 79px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_10.png"  style="width: 101px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_11.png"  style="width: 93px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_12.png"  style="width: 93px; height: 12px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_3_13.png" style="width: 76px;  height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_0.png" style="width: 107px;  height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_1.png"  style="width: 173px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_2.png"  style="width: 35px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_3.png"  style="width: 31px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_4.png"  style="width: 11px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_5.png"  style="width: 31px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_6.png"  style="width: 10px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_7.png"  style="width: 30px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_8.png"  style="width: 130px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_9.png"  style="width: 79px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_10.png"  style="width: 101px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_11.png"  style="width: 93px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_12.png"  style="width: 93px; height: 12px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_3_13.png" style="width: 76px;  height: 12px; border-width: 0px;"></td>
         </tr>
 
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_0.png" style="width: 107px;  height: 16px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_1.png"  style="width: 173px; height: 16px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_2.png"  style="width: 35px; height: 16px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_3.png"  style="width: 31px; height: 16px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_4.png"  style="width: 11px; height: 16px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_5.png"  style="width: 31px; height: 16px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_6.png"  style="width: 10px; height: 16px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_7.png"  style="width: 30px; height: 16px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_8.png"  style="width: 130px; height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_0.png" style="width: 107px;  height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_1.png"  style="width: 173px; height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_2.png"  style="width: 35px; height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_3.png"  style="width: 31px; height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_4.png"  style="width: 11px; height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_5.png"  style="width: 31px; height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_6.png"  style="width: 10px; height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_7.png"  style="width: 30px; height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_8.png"  style="width: 130px; height: 16px; border-width: 0px;"></td>
             <td colspan="4" rowspan="3">
                  <table class="tablaContenido" align="center">
                     <tr>
@@ -125,7 +125,7 @@ if(isset($certificado)&&$certificado=="BloqueEjemploAjax") {
                         </td>
                     </tr>
                 </table>
-                        <?
+                        <?php
 
 
 
@@ -185,52 +185,52 @@ if(isset($certificado)&&$certificado=="BloqueEjemploAjax") {
             echo $this->miFormulario->campoTexto($configuracion,$atributos);
             ?>
             </td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_4_13.png" style="width: 76px;  height: 16px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_4_13.png" style="width: 76px;  height: 16px; border-width: 0px;"></td>
         </tr>
 
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_0.png" style="width: 107px;  height: 32px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_1.png"  style="width: 173px; height: 32px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_2.png"  style="width: 35px; height: 32px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_3.png"  style="width: 31px; height: 32px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_4.png"  style="width: 11px; height: 32px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_5.png"  style="width: 31px; height: 32px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_6.png"  style="width: 10px; height: 32px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_7.png"  style="width: 30px; height: 32px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_8.png"  style="width: 130px; height: 32px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_5_13.png" style="width: 76px;  height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_0.png" style="width: 107px;  height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_1.png"  style="width: 173px; height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_2.png"  style="width: 35px; height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_3.png"  style="width: 31px; height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_4.png"  style="width: 11px; height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_5.png"  style="width: 31px; height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_6.png"  style="width: 10px; height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_7.png"  style="width: 30px; height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_8.png"  style="width: 130px; height: 32px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_5_13.png" style="width: 76px;  height: 32px; border-width: 0px;"></td>
         </tr>
 
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_0.png" style="width: 107px;  height: 282px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_1.png"  style="width: 173px; height: 282px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_2.png"  style="width: 35px; height: 282px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_3.png"  style="width: 31px; height: 282px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_4.png"  style="width: 11px; height: 282px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_5.png"  style="width: 31px; height: 282px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_6.png"  style="width: 10px; height: 282px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_7.png"  style="width: 30px; height: 282px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_8.png"  style="width: 130px; height: 282px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_6_13.png" style="width: 76px;  height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_0.png" style="width: 107px;  height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_1.png"  style="width: 173px; height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_2.png"  style="width: 35px; height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_3.png"  style="width: 31px; height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_4.png"  style="width: 11px; height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_5.png"  style="width: 31px; height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_6.png"  style="width: 10px; height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_7.png"  style="width: 30px; height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_8.png"  style="width: 130px; height: 282px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_6_13.png" style="width: 76px;  height: 282px; border-width: 0px;"></td>
         </tr>
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_0.png" style="width: 107px;  height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_1.png"  style="width: 173px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_2.png"  style="width: 35px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_3.png"  style="width: 31px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_4.png"  style="width: 11px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_5.png"  style="width: 31px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_6.png"  style="width: 10px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_7.png"  style="width: 30px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_8.png"  style="width: 130px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_9.png"  style="width: 79px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_10.png"  style="width: 101px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_11.png"  style="width: 93px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_12.png"  style="width: 93px; height: 3px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_7_13.png" style="width: 76px;  height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_0.png" style="width: 107px;  height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_1.png"  style="width: 173px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_2.png"  style="width: 35px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_3.png"  style="width: 31px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_4.png"  style="width: 11px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_5.png"  style="width: 31px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_6.png"  style="width: 10px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_7.png"  style="width: 30px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_8.png"  style="width: 130px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_9.png"  style="width: 79px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_10.png"  style="width: 101px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_11.png"  style="width: 93px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_12.png"  style="width: 93px; height: 3px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_7_13.png" style="width: 76px;  height: 3px; border-width: 0px;"></td>
         </tr>
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_8_0.png" style="width: 107px;  height: 214px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_8_0.png" style="width: 107px;  height: 214px; border-width: 0px;"></td>
             <td colspan="12" rowspan="3"  style="vertical-align: top;">
                 <table class="tablaContenido2" align="center">
                     <tr>
@@ -290,15 +290,15 @@ if(isset($certificado)&&$certificado=="BloqueEjemploAjax") {
                 </div>
 
             </td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_8_13.png" style="width: 76px;  height: 214px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_8_13.png" style="width: 76px;  height: 214px; border-width: 0px;"></td>
         </tr>
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_8_0.png" style="width: 107px;  height: 214px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_8_13.png" style="width: 76px;  height: 214px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_8_0.png" style="width: 107px;  height: 214px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_8_13.png" style="width: 76px;  height: 214px; border-width: 0px;"></td>
         </tr>
         <tr>
-            <td><img alt=" " src="<? echo $directorio?>contenido_8_0.png" style="width: 107px;  height: 214px; border-width: 0px;"></td>
-            <td><img alt=" " src="<? echo $directorio?>contenido_8_13.png" style="width: 76px;  height: 214px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_8_0.png" style="width: 107px;  height: 214px; border-width: 0px;"></td>
+            <td><img alt=" " src="<?php echo $directorio?>contenido_8_13.png" style="width: 76px;  height: 214px; border-width: 0px;"></td>
         </tr>
     </table>
 
@@ -306,64 +306,64 @@ if(isset($certificado)&&$certificado=="BloqueEjemploAjax") {
 
 
     <!-- Mapas de Imagenes-->
-    <map name="imagen"><?
+    <map name="imagen"><?php
                 include_once($configuracion["raiz_documento"].$configuracion["clases"]."/encriptar.class.php");
                 $cripto=new encriptar();
                 $variable="pagina=index";
                 $variable.="&imagenPrincipal=".$idImagenSiguiente;
                 $variable=$cripto->codificar_url($variable,$configuracion);
-                ?><area shape="rect" coords="0,0,166,25" href="<? echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<? echo $directorio ?>/imagen<? echo ($idImagenActual)?>/enlaceCambiarImagen.png')" />
+                ?><area shape="rect" coords="0,0,166,25" href="<?php echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<?php echo $directorio ?>/imagen<?php echo ($idImagenActual)?>/enlaceCambiarImagen.png')" />
     </map>
     <map name="rss">
-        <area shape="rect" coords="0,0,37,24" title="Canal RSS. Las noticias de la XVI Semana ICG en tu escritorio"  href="<?
+        <area shape="rect" coords="0,0,37,24" title="Canal RSS. Las noticias de la XVI Semana ICG en tu escritorio"  href="<?php
                 echo $configuracion["host"].$configuracion["site"].$configuracion["javascript"]."/rss.xml";
-                      ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('rss','<? echo $directorio ?>enlacerss.png')"/>
+                      ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('rss','<?php echo $directorio ?>enlacerss.png')"/>
     </map>
-    <map name="informacionConferencia"><?
+    <map name="informacionConferencia"><?php
             include_once($configuracion["raiz_documento"].$configuracion["clases"]."/encriptar.class.php");
             $cripto=new encriptar();
             $variable="pagina=informacionConferencia";
             $variable=$cripto->codificar_url($variable,$configuracion);
-            ?><area shape="rect" coords="0,0,101,77" href="<? echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<? echo $directorio ?>/imagen<? echo ($idImagenActual)?>/enlaceCambiarImagen.png')" />
+            ?><area shape="rect" coords="0,0,101,77" href="<?php echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<?php echo $directorio ?>/imagen<?php echo ($idImagenActual)?>/enlaceCambiarImagen.png')" />
     </map>
-    <map name="inscripcionConferencia"><?
+    <map name="inscripcionConferencia"><?php
             include_once($configuracion["raiz_documento"].$configuracion["clases"]."/encriptar.class.php");
             $cripto=new encriptar();
             $variable="pagina=inscripcionConferencia";
             $variable=$cripto->codificar_url($variable,$configuracion);
-            ?><area shape="rect" coords="0,0,101,77" href="<? echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<? echo $directorio ?>/imagen<? echo ($idImagenActual)?>/enlaceCambiarImagen.png')" />
+            ?><area shape="rect" coords="0,0,101,77" href="<?php echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<?php echo $directorio ?>/imagen<?php echo ($idImagenActual)?>/enlaceCambiarImagen.png')" />
     </map>
-    <map name="calendarioConferencia"><?
+    <map name="calendarioConferencia"><?php
             include_once($configuracion["raiz_documento"].$configuracion["clases"]."/encriptar.class.php");
             $cripto=new encriptar();
             $variable="pagina=calendarioConferencia";
             $variable=$cripto->codificar_url($variable,$configuracion);
-            ?><area shape="rect" coords="0,0,101,77" href="<? echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<? echo $directorio ?>/imagen<? echo ($idImagenActual)?>/enlaceCambiarImagen.png')" />
+            ?><area shape="rect" coords="0,0,101,77" href="<?php echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<?php echo $directorio ?>/imagen<?php echo ($idImagenActual)?>/enlaceCambiarImagen.png')" />
     </map>
-         <map name="semana"><?
+         <map name="semana"><?php
             include_once($configuracion["raiz_documento"].$configuracion["clases"]."/encriptar.class.php");
             $cripto=new encriptar();
             $variable="pagina=index";
             $variable=$cripto->codificar_url($variable,$configuracion);
-            ?><area shape="rect" coords="0,0,101,77" href="<? echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<? echo $directorio ?>/imagen<? echo ($idImagenActual)?>/contenido_2_1.png')" />
+            ?><area shape="rect" coords="0,0,101,77" href="<?php echo $indice.$variable ?>" onmouseout="imagenOriginal()" onmouseover="cambiarImagen('imagen','<?php echo $directorio ?>/imagen<?php echo ($idImagenActual)?>/contenido_2_1.png')" />
     </map>
     <!--Fin Mapa de Imagenes-->
     <!--Division flotante para noticias-->
-            <?
+            <?php
             if(isset($_REQUEST["noticia"])) {
                 ?><div id="divNoticia">
-        <div class="cuerpoNoticia"><?
+        <div class="cuerpoNoticia"><?php
 
                         switch($_REQUEST["noticia"]) {
 
                             case "exitoInscripcion":?>
             <p class="textoTitulo texto_negrita">
-                                    <? echo $this->lenguaje["encabezadoExitoInscripcion"]?>
+                                    <?php echo $this->lenguaje["encabezadoExitoInscripcion"]?>
             </p>
             <p class="textoMediano">
-                                    <? echo $this->lenguaje["cuerpoExitoInscripcion"]?>
+                                    <?php echo $this->lenguaje["cuerpoExitoInscripcion"]?>
             </p>
-                                <?
+                                <?php
                                 break;
 
                             case "usuarioExiste":?>
@@ -373,7 +373,7 @@ if(isset($certificado)&&$certificado=="BloqueEjemploAjax") {
             <p class="textoMediano">
                 Por favor contacte a nuestras oficinas para que puedan habilitar su cuenta.
             </p>
-                                <?
+                                <?php
                                 break;
 
                             case "no_usuario":?>
@@ -383,7 +383,7 @@ if(isset($certificado)&&$certificado=="BloqueEjemploAjax") {
             <p class="textoMediano">
                 Por favor reingrese el nombre de usuario y clave o solicite una cuenta desde el enlace correspondiente.
             </p>
-                                <?
+                                <?php
                                 break;
 
                             case "logout":?>
@@ -393,27 +393,27 @@ if(isset($certificado)&&$certificado=="BloqueEjemploAjax") {
             <p class="textoMediano">
                 Gracias por utilizar nuestros servicios. Lo esperamos de nuevo en nuestro portal.
             </p>
-                                <?
+                                <?php
                                 break;
 
                             case "varios_perfiles":?>
             <p class="textoTitulo texto_negrita">
-                                    <? echo $this->lenguaje["encabezadoVariosPerfiles"]?>
+                                    <?php echo $this->lenguaje["encabezadoVariosPerfiles"]?>
             </p>
             <p class="textoMediano">
-                                    <? echo $this->lenguaje["cuerpoVariosPerfiles"]?>
+                                    <?php echo $this->lenguaje["cuerpoVariosPerfiles"]?>
             </p>
-                                <?
+                                <?php
                                 break;
 
                         }
                         ?></div>
-    </div><?
+    </div><?php
             }
 
             ?>
     <!--Division flotante para noticias-->
-</div><?
+</div><?php
 
             
            
